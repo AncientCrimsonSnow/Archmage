@@ -6,9 +6,9 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] private float speed;
+    Vector2 temPos;
 
-
-    public Vector3 location;
+    //public Vector3 location;
     public PlayerActionscript controls;
     private GameObject player;
     public Rigidbody2D rb;
@@ -19,10 +19,9 @@ public class PlayerController : MonoBehaviour
         speed = 1f;
         controls = new PlayerActionscript();
         rb = new Rigidbody2D();
-        player = GameObject.Find("Player");
 
-        controls.Player.Fire.performed += _ => Fire();
-        controls.Player.Move.performed += context => Move(context.ReadValue<Vector2>());
+        controls.Player.Fire.started += _ => Fire();
+        controls.Player.Move.started += context => Move(context.ReadValue<Vector2>());
     }
 
     // Start is called before the first frame update
@@ -42,8 +41,12 @@ public class PlayerController : MonoBehaviour
     }
 
     void Move(Vector2 direction){
-        Debug.Log("Palyer wants to move");
+        Debug.Log("Player wants to move in direction: " + direction);
 
+        temPos = transform.position;
+        temPos += direction * speed * Time.deltaTime;
+        //temPos.x += 1f;
+        transform.position = temPos;
         //position = rb.position;
         //Vector3 location = new Vector3(0,0,0);
 
@@ -69,38 +72,3 @@ public class PlayerController : MonoBehaviour
         controls.Disable();
     }
 }
-
-
-/*
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.InputSystem;
-
-public class PlayerBehaviour : MonoBehaviour
-{
-    public PlayerActionscript controls;
-
-    void Awake(){
-        controls.Player.Fire.performed += _ => Fire();
-        controls.Player.Move.performed += context => Move();
-    }
-
-    void Fire(){
-        Debug.Log("Bzzz~~");
-    }
-
-    void Move(){
-        Debug.Log("Player wants to move");
-    }
-
-    public void OnEnable(){
-        controls.Enable();
-    }
-
-    public void OnDisable(){
-        controls.Disable();
-    }
-}
-
-*/
