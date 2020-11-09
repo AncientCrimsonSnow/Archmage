@@ -11,13 +11,18 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("Current_Scene"))
+        if (continueButton)
         {
-            continueButton.SetActive(true);
-        }
-        else
-        {
-            continueButton.SetActive(false);
+            // If there's a save, it will be recognized,
+            // and you will see the Continue button in the main menu
+            if (PlayerPrefs.HasKey("Current_Scene"))
+            {
+                continueButton.SetActive(true);
+            }
+            else
+            {
+                continueButton.SetActive(false);
+            }
         }
     }
 
