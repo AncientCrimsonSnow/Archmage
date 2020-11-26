@@ -5,25 +5,25 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int health;
-    public int numOfHearts;
+    //public int health;
+    public int numOfHearts = 3;
 
     [SerializeField]
     public Image[] heartsImgs;
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
-    public void HandleHearts()
+    public void HandleHearts(int playerLives)
     {
         // If the health is more than number of hearts display max number of hearts
-        if (health > numOfHearts)
+        if (playerLives > numOfHearts)
         {
-            health = numOfHearts;
+            playerLives = numOfHearts;
         }
 
         for (int i = 0; i < heartsImgs.Length; i++)
         {
-            if (i < health)
+            if (i < playerLives)
             {
                 heartsImgs[i].sprite = fullHeart;
             }

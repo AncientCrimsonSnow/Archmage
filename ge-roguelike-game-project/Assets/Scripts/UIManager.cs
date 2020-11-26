@@ -7,10 +7,10 @@ public class UIManager : MonoBehaviour
 {
 	void Update()
     {
-		UpdateLives();
+		UpdateLives(FindObjectOfType<GameSession>().playerLives);
 	}
 
-    public void UpdateLives() {
-		FindObjectOfType<Health>().HandleHearts();
+    public void UpdateLives(int playerLives) {
+		FindObjectOfType<Health>().HandleHearts(playerLives);
 	}
 }
