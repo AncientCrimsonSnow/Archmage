@@ -6,45 +6,35 @@ using UnityEngine.SceneManagement;
 // TODO: GameSession object must be created in the scene for this to work
 public class GameSession : MonoBehaviour
 {
-    [SerializeField]
-    public int playerLives = 3;
+    public int playerLives;
     public string gameOverScene;
-    //private AssetBundle myLoadedAssetBundle;
-    //private string[] scenePaths;
+    public float damageTimeout = 1f;
+    private bool canTakeDamage = true;
 
-    //private void Awake()
-    //{
-    //    int numGameSession = FindObjectsOfType<GameSession>().Length;
-    //    if (numGameSession > 1)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //    else
-    //    {
-    //        DontDestroyOnLoad(gameObject);
-    //    }
-    //}
+    private void Awake()
+    {
+        int numGameSession = FindObjectsOfType<GameSession>().Length;
+        if (numGameSession > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        //myLoadedAssetBundle = AssetBundle.LoadFromFile("../scenes");
-        //scenePaths = myLoadedAssetBundle.GetAllScenePaths();
+        Debug.Log("Lives on Start: " + playerLives);
         FindObjectOfType<UIManager>().UpdateLives(playerLives);
-    }
-
-    private void Update()
-    {
-        if (playerLives < 1)
-        {
-            ResetGameSession();
-        }
     }
 
     public void ProcessPlayerDeath()
     {
         if(playerLives > 1)
         {
-            TakeLife(playerLives);
+            TakeLife();
             FindObjectOfType<UIManager>().UpdateLives(playerLives);
         }
         else
@@ -52,11 +42,24 @@ public class GameSession : MonoBehaviour
             ResetGameSession();
         }
     }
-    private void TakeLife(int playerLives) => playerLives--;
+    private void TakeLife()
+    {
+        playerLives--;
+        //StartCoroutine(damageTimer());
+        //var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        //SceneManager.LoadScene(currentSceneIndex);
+    }
 
     private void ResetGameSession()
     {
         SceneManager.LoadScene(gameOverScene);
-        //Destroy(gameObject);
+        Destroy(gameObject);
+    }
+
+    private IEnumerator damageTimer()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageTimeout);
+        canTakeDamage = true;
     }
 }
