@@ -16,21 +16,46 @@ public class RoomSpawner : MonoBehaviour
     private RoomTemplates templates;
     private int rand;
     public bool spawned = false;
-
-    public float waitTime;
-
+    
+    
+    private float softCap = 50;
+    private float hardCap = 100;
+    
+    private float waitTime = 5;
+    private float distanceToSpawn_Pow;
+    
     void Start()
     {
+        distanceToSpawn_Pow = transform.position.x * transform.position.x + transform.position.y * transform.position.y;
         Destroy(gameObject, waitTime);
         templates = GameObject.Find("Room Templates").GetComponent<RoomTemplates>();
-        Invoke("Spawn", 1f);
+        Invoke("Spawn", 0.5f);
     }
     void Spawn()
     {
         if (!spawned)
         {
-            
             rand = UnityEngine.Random.Range(0, templates.botRooms.Length);
+            
+            if (distanceToSpawn_Pow > softCap * softCap)
+            {
+                if (distanceToSpawn_Pow > hardCap * hardCap)
+                {
+                    rand = 0;
+                }
+                else if (rand >= 4)
+                {
+                    rand = rand - 4;
+                }
+            }
+            else
+            {
+                if(rand < 4)
+                    rand = rand + 3;
+            }
+            Debug.Log(softCap);
+            Debug.Log(hardCap);
+            
             switch (openingDirection)
             {
                 case 0:

@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 0
   spawned: 0
+  softCap: 100
+  hardCap: 200
 --- !u!61 &-8124524955586784076
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -5,6 +5,15 @@ using UnityEngine;
 
 public class RoomTemplates : MonoBehaviour
 {
+    /*
+     * Index 0:
+     *     closeup
+     *     1-0
+     * Index 1-3:
+     *     1-1
+     * Index 4-7
+     *     1-2
+     */
     public GameObject[] topRooms;
     public GameObject[] botRooms;
     public GameObject[] leftRooms;
@@ -13,21 +22,24 @@ public class RoomTemplates : MonoBehaviour
     public GameObject closedRooms;
     public List<GameObject> rooms;
 
-    public float waitTime;
+    public bool spawning = true;
     private bool spawnedBoss = false;
     public GameObject boss;
 
+    private GameObject findSpawnpoint;
+    
     private void Update()
     {
+        findSpawnpoint = GameObject.FindWithTag("Spawnpoint");
+        if (findSpawnpoint is null)
+        {
+            spawning = false;
+        }
         
-        if (waitTime <= 0 && !spawnedBoss)
+        if (!spawning && !spawnedBoss)
         {
             Instantiate(boss, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
             spawnedBoss = true;
-        }
-        else
-        {
-            waitTime -= Time.deltaTime;
         }
     }
 }
