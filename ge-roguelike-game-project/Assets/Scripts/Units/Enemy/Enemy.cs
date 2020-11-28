@@ -4,24 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    // TODO: add variable damage
+    // Pass it ProcessPlayerDeath() after editing the method to ProcessPlayerDeath(int/float damage) in GameSession script
     public float damageTimeout = .2f;
     private bool canTakeDamage = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (canTakeDamage && other.CompareTag("Player"))
         {
-            Debug.Log("Collisiooooon");
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
 
             StartCoroutine(damageTimer());

@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// TODO: GameSession object must be created in the scene for this to work
+// TODO: GameSession object must be created in the scene for this to work. There's a prefab for it.
 public class GameSession : MonoBehaviour
 {
-    public int playerLives;
+    public int maxHealth = 100;
+    public int currentHealth;
     public string gameOverScene;
-    public float damageTimeout = 1f;
-    private bool canTakeDamage = true;
 
     private void Awake()
     {
@@ -26,40 +25,35 @@ public class GameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Lives on Start: " + playerLives);
-        FindObjectOfType<UIManager>().UpdateLives(playerLives);
+        currentHealth = maxHealth;
+        FindObjectOfType<Healthbar>().SetMaxHealth(maxHealth);
+        FindObjectOfType<UIManager>().UpdateLives(currentHealth);
     }
 
+    // TODO: adjust for damage from enemies by passing a parameter damage to the method below
+    // -> ProcessPlayerDeath(int/float damage); & TakeDamage(damage);
+    // Variable damage should be created in the Enemy script and passed there
     public void ProcessPlayerDeath()
     {
-        if(playerLives > 1)
+        if(currentHealth > 0)
         {
-            TakeLife();
-            FindObjectOfType<UIManager>().UpdateLives(playerLives);
+            TakeDamage(20);
+            FindObjectOfType<UIManager>().UpdateLives(currentHealth);
         }
         else
         {
             ResetGameSession();
         }
     }
-    private void TakeLife()
+    private void TakeDamage(int damage)
     {
-        playerLives--;
-        //StartCoroutine(damageTimer());
-        //var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        //SceneManager.LoadScene(currentSceneIndex);
+        currentHealth -= damage;
+      
     }
 
     private void ResetGameSession()
     {
         SceneManager.LoadScene(gameOverScene);
         Destroy(gameObject);
-    }
-
-    private IEnumerator damageTimer()
-    {
-        canTakeDamage = false;
-        yield return new WaitForSeconds(damageTimeout);
-        canTakeDamage = true;
     }
 }
