@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Real_Scenes/MainMenu.unity
     guid: 91cf9996d77234871a5f5289fea406a0
   - enabled: 1
-    path: Assets/Scenes/Testing/PlaceholderNewGameScene.unity
+    path: Assets/Scenes/Testing/Dasha/PlaceholderNewGameScene.unity
     guid: 6f22a0af4a8714a97b11b44b4affe638
   - enabled: 1
     path: Assets/Scenes/Testing/Miles/Start_TestWorldSpawn.unity
