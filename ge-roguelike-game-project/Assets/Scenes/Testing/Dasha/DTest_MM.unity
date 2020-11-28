@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd3461e3ded0451392346332a8e112b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameScene: PlaceholderNewGameScene
+  newGameScene: D_TestWorld1
   continueButton: {fileID: 1833810422}
 --- !u!1 &1833810422
 GameObject:
