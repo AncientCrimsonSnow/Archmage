@@ -8,7 +8,6 @@ public class CameraFollow : MonoBehaviour
     public Camera cam;
 
     private float camHeight = 2.3f;
-    //public float smoothSpeed = 0.5f;
     private Vector3 offset = new Vector3(0, 0, -10);
 
     void LateUpdate(){
