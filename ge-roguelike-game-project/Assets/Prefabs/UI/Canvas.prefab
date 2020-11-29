@@ -1,5 +1,97 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3126164677585709381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5796646024832640782}
+  - component: {fileID: 5151560573897607207}
+  - component: {fileID: 6929626059614395699}
+  - component: {fileID: 5709045428350187993}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5796646024832640782
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126164677585709381}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8316325242433607369}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -262, y: -60.3}
+  m_SizeDelta: {x: 501.5321, y: 63.741272}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5151560573897607207
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126164677585709381}
+  m_CullTransparentMesh: 0
+--- !u!114 &6929626059614395699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126164677585709381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.91249955, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 377fdfa596ee24158804c97de411b110, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Current Level:'
+--- !u!114 &5709045428350187993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126164677585709381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422626adb9e4f4636b95d2387a6ff1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevelText: {fileID: 0}
 --- !u!1 &8316325242433607366
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,6 +107,7 @@ GameObject:
   - component: {fileID: 8316325242433607373}
   - component: {fileID: 8316325242433607375}
   - component: {fileID: 8316325242433607374}
+  - component: {fileID: 7987661334578021444}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -33,6 +126,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 5796646024832640782}
   - {fileID: 8316325243142298278}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -129,6 +223,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   gameOverScene: GameOverScene
+  currentGameLevel: 1
 --- !u!114 &8316325242433607374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +237,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 8316325243142298280}
+--- !u!114 &7987661334578021444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8316325242433607366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422626adb9e4f4636b95d2387a6ff1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevelText: {fileID: 6929626059614395699}
 --- !u!1001 &4456368529081313307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 5670513722272215741, guid: ccb572db4cc0f48a1a4e8de78308f5bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5670513722272215741, guid: ccb572db4cc0f48a1a4e8de78308f5bf,
         type: 3}
