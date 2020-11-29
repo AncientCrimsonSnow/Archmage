@@ -17,7 +17,7 @@ public class LevelExit : MonoBehaviour
         {
             transition.SetTrigger("Start");
             yield return new WaitForSecondsRealtime(levelLoadDelay);
-            {
+            
             SceneManager.LoadScene(currentSceneIndex + 1);
             FindObjectOfType<GameSession>().AddToGameLevel();
         }
