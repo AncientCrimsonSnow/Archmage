@@ -9,6 +9,7 @@ public class GameSession : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public string gameOverScene;
+    public int currentGameLevel = 1;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class GameSession : MonoBehaviour
         currentHealth = maxHealth;
         FindObjectOfType<Healthbar>().SetMaxHealth(maxHealth);
         FindObjectOfType<UIManager>().UpdateLives(currentHealth);
+        FindObjectOfType<UIManager>().UpdateGameLevel(currentGameLevel);
     }
 
     // TODO: adjust for damage from enemies by passing a parameter damage to the method below
@@ -45,10 +47,17 @@ public class GameSession : MonoBehaviour
             ResetGameSession();
         }
     }
+
     private void TakeDamage(int damage)
     {
         currentHealth -= damage;
       
+    }
+
+    public void AddToGameLevel()
+    {
+        currentGameLevel++;
+        FindObjectOfType<UIManager>().UpdateGameLevel(currentGameLevel);
     }
 
     private void ResetGameSession()
