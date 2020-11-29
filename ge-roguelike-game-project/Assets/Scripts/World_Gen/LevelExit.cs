@@ -7,20 +7,16 @@ public class LevelExit : MonoBehaviour
 {
     [SerializeField]
     private float levelLoadDelay = 2f;
+    public Animator transition;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public IEnumerator LoadNextLevel()
     {
-        StartCoroutine(LoadNextLevel());
-    }
-
-    IEnumerator LoadNextLevel()
-    {
-        yield return new WaitForSecondsRealtime(levelLoadDelay);
-
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         if (Application.CanStreamedLevelBeLoaded(currentSceneIndex + 1))
         {
+            transition.SetTrigger("Start");
+            yield return new WaitForSecondsRealtime(levelLoadDelay);
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
         else
