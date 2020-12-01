@@ -520,5 +520,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 2981676030850299481, guid: 97759b9c679293c4881df347c1d910cb,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981676030850299481, guid: 97759b9c679293c4881df347c1d910cb,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97759b9c679293c4881df347c1d910cb, type: 3}

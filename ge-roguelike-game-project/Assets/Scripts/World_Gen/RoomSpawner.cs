@@ -18,9 +18,8 @@ public class RoomSpawner : MonoBehaviour
     public bool spawned = false;
     
     
-    private float softCap = 5;
-    private float hardCap = 10;
-    
+    private float softCap = 75;
+    private float hardCap = 100;
     private float waitTime = 15;
     private float distanceToSpawn_Pow;
     
