@@ -234,67 +234,6 @@ Transform:
   m_Father: {fileID: 2083403772}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1288505420
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1288505423}
-  - component: {fileID: 1288505422}
-  - component: {fileID: 1288505421}
-  m_Layer: 0
-  m_Name: Spell_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1288505421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288505420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f85339942cdb1646928ff149fe1f5fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shootBehavior: straight
---- !u!114 &1288505422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288505420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e28f26fde0d8c0a4ea4195d63de4b6a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Spell_0
-  projectilePrefab: {fileID: 2969776561369301592, guid: 5254dea61faffdd489d074902755c4de,
-    type: 3}
-  speed: 10
---- !u!4 &1288505423
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288505420}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2083403770
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +246,7 @@ GameObject:
   - component: {fileID: 2083403771}
   - component: {fileID: 2083403774}
   - component: {fileID: 2083403773}
+  - component: {fileID: 2083403775}
   m_Layer: 0
   m_Name: Test_Player
   m_TagString: Untagged
@@ -327,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 789626800}
-  spell: {fileID: 1288505420}
+  spell: {fileID: 0}
   temp: 0
 --- !u!4 &2083403772
 Transform:
@@ -372,9 +312,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a21329fdd5a1e4598c5c03ee8f7a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Test
-  lvl: 0
-  exp: 0
-  strength: 0
-  moveSpeed: 0
-  sprite: {fileID: 0}
+  _CharData:
+    name: 
+    lvl: 0
+    exp: 0
+    strength: 0
+    moveSpeed: 0
+--- !u!114 &2083403775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083403770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077695f147e24c24fa54d86006342966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: Test
+  spell: {fileID: 7884008475462725803, guid: 2c22d895efee4344daefd1854810d09c, type: 3}
+  firePoint: {fileID: 789626800}
+  cam: {fileID: 740431386}

@@ -4,10 +4,15 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class shootBehavior : MonoBehaviour
+public class shootBehavior
 {
     public String _shootBehavior;
-    
+
+    public shootBehavior(string shootBehavior)
+    {
+        _shootBehavior = shootBehavior;
+    }
+
     public void shoot(GameObject projectile, Vector2 direction, float speed)
     {
         switch (_shootBehavior)

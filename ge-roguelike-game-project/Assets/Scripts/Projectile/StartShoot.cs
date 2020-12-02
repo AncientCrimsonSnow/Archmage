@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class StartShoot : MonoBehaviour
 {
-    public Transform firePoint;
+    [SerializeField]
+    private Transform firePoint;
     public GameObject spell;
-
+    
     public bool temp;
     void Start()
     {

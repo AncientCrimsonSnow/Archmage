@@ -13,7 +13,7 @@ public class TestCharData : MonoBehaviour
         save = false;
         load = false;
         temp = false;
-        gameObject.GetComponent<CharData>().ResetData("Test");
+        gameObject.GetComponent<CharData_Controller>().ResetData("Test");
     }
 
     // Update is called once per frame
@@ -26,13 +26,13 @@ public class TestCharData : MonoBehaviour
         if (save)
         {
             save = false;
-            gameObject.GetComponent<CharData>().saveData();
+            gameObject.GetComponent<CharData_Controller>().saveData();
             
         }
         if (load)
         {
             load = false;
-            gameObject.GetComponent<CharData>().loadData(name);
+            gameObject.GetComponent<CharData_Controller>().loadData(name);
         }
     }
 }
