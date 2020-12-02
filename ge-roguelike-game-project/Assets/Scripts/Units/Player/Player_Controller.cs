@@ -11,7 +11,7 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private Camera cam;
     private Movement_Controller _movementController;
-    private CharData_Controller _charDataController;
+    public CharData_Controller _charDataController;
     private Animator _animator;
     
     // Start is called before the first frame update

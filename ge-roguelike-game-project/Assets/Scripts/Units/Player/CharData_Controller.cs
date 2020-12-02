@@ -24,7 +24,7 @@ public class CharData_Controller
         _CharData.Lvl = 1;
         _CharData.Exp = 0;
         _CharData.Strength = 10;
-        _CharData.MoveSpeed = 7;
+        _CharData.MoveSpeed = 3;
         saveData();
     }
     public void saveData()
