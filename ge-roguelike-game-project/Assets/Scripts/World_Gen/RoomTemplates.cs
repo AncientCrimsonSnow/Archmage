@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class RoomTemplates : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class RoomTemplates : MonoBehaviour
         {
             Instantiate(boss, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
             spawnedBoss = true;
+            AstarPath.active.Scan();
         }
     }
 }
