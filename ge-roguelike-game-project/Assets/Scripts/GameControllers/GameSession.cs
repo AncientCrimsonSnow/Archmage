@@ -35,11 +35,11 @@ public class GameSession : MonoBehaviour
     // TODO: adjust for damage from enemies by passing a parameter damage to the method below
     // -> ProcessPlayerDeath(int/float damage); & TakeDamage(damage);
     // Variable damage should be created in the Enemy script and passed there
-    public void ProcessPlayerDeath()
+    public void ProcessPlayerDeath(int damage)
     {
         if(currentHealth > 0)
         {
-            TakeDamage(20);
+            TakeDamage(damage);
             FindObjectOfType<UIManager>().UpdateLives(currentHealth);
         }
         else

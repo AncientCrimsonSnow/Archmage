@@ -9,6 +9,8 @@ public class Mage_Movement : MonoBehaviour
 
 
     public float bulletForce = 10f;
+    public int bulletDamage = 10;
+
     public float movespeed = 5f;
 
     public Rigidbody2D rb;
@@ -68,6 +70,7 @@ public class Mage_Movement : MonoBehaviour
         // Create Bullet from prefab and add force
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     }
 }
