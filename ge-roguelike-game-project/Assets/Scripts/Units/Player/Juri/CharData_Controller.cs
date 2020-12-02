@@ -12,8 +12,12 @@ public class CharData_Controller
 
     public CharData_Controller(string name)
     {
-        loadData(name);
+        if (!loadData(name))
+        {
+            ResetData(name);
+        }
     }
+
     public void ResetData(String name)
     {
         _CharData.Name = name;
@@ -38,7 +42,7 @@ public class CharData_Controller
         }
     }
 
-    public void loadData(string name)
+    public bool loadData(string name)
     {
         if (File.Exists(Application.persistentDataPath + "/CharData_" + name + ".dat"))
         {
@@ -54,7 +58,10 @@ public class CharData_Controller
             {
                 Debug.Log(thisVar.Name + " = " + thisVar.GetValue(this._CharData, null));
             }
+
+            return true;
         }
+        return false;
     }
 }
 

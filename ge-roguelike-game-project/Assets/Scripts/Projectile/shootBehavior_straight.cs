@@ -8,5 +8,4 @@ public class shootBehavior_straight
     {
         projectile.GetComponent<Rigidbody2D>().AddForce(direction * speed, ForceMode2D.Impulse);
     }
-
 }

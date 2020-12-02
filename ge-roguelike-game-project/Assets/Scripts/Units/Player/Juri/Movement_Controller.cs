@@ -36,6 +36,5 @@ public class Movement_Controller
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         return mousePos - rb.position;
-
     }
 }
