@@ -24,11 +24,13 @@ public class Player_Controller : MonoBehaviour
         _movementController = new Movement_Controller(gameObject.GetComponent<Rigidbody2D>());
         _animator = GetComponent<Animator>();
         spell.GetComponent<BaseSpell>().Init();
+        
+        FindObjectOfType<UIManager>().SetMaxHP(_charDataController._CharData.MAXHp);
     }
 
     // Update is called once per frame
     void Update()
-    {    
+    {
         //Movement
         _movementController.move(_charDataController._CharData.MoveSpeed, cam);
         _animator.SetBool("isWalking", _movementController.isWalking);

@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    void Update()
-    {
-		UpdateLives(FindObjectOfType<GameSession>().currentHealth);
-	}
-
     public void UpdateLives(int health) {
 	    FindObjectOfType<Healthbar>().SetHealth(health);
 	}
 
+    public void SetMaxHP(int health)
+    {
+	    FindObjectOfType<Healthbar>().SetMaxHealth(health);
+    }
 	public void UpdateGameLevel(int level)
     {
         FindObjectOfType<LevelCounter>().SetGameLevel(level);
