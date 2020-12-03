@@ -65,4 +65,9 @@ public class GameSession : MonoBehaviour
         SceneManager.LoadScene(gameOverScene);
         Destroy(gameObject);
     }
+
+    public void PlayerDied()
+    {
+        ResetGameSession();
+    }
 }
