@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         // damage will be parsed to the player and the countdown set to false
         if (canTakeDamage && other.CompareTag("Player"))
         {
-            FindObjectOfType<GameSession>().ProcessPlayerDeath(enemyDamage);
+            other.GetComponent<Player_Controller>()._charDataController.doDmg(enemyDamage);
             StartCoroutine(damageTimer());
         }
     }
