@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
 
     public int enemyHealth = 100;
 
+
     // When the object holding the script enemy collides with another object this whill be triggered
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
         // damage will be parsed to the player and the countdown set to false
         if (canTakeDamage && other.CompareTag("Player"))
         {
+            Debug.Log(other);
             other.GetComponent<Player_Controller>()._charDataController.doDmg(enemyDamage);
             StartCoroutine(damageTimer());
         }

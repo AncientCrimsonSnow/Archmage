@@ -8,10 +8,9 @@ public class Bullet : MonoBehaviour
     {
         int damageAmount = 10;
 
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Boss"))
         {
-
-            Debug.Log("I hit " + collision.gameObject.tag + " and would deal no Damage!!!");
+            Destroy(gameObject);
 
         }else if (collision.CompareTag("Enemy"))
         {

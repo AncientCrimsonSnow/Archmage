@@ -26,6 +26,7 @@ public class RoomTemplates : MonoBehaviour
     public bool spawning = true;
     private bool spawnedBoss = false;
     public GameObject boss;
+    public GameObject enemy;
 
     private GameObject findSpawnpoint;
     
@@ -39,10 +40,39 @@ public class RoomTemplates : MonoBehaviour
         
         if (!spawning && !spawnedBoss)
         {
-            Instantiate(boss, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
-            spawnedBoss = true;
+            
+            spawnBoss();
+            spawnMobs();
             AstarPath.active.Scan();
         }
+    }
+
+    void spawnBoss(){
+        Instantiate(boss, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
+        Debug.Log("Boss spawned at: " + rooms[rooms.Count - 1].transform.position);
+        spawnedBoss = true;
+    }
+
+    void spawnMobs(){
+        // Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
+        //Instantiate(boss, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
+
+        int i = 0;
+        foreach (var room in rooms)
+        {
+            if(i == 0 || i == rooms.Count){
+                Debug.Log("No ennemy in first and last room");
+            }else{
+                Instantiate(enemy, room.transform.position, Quaternion.identity);
+                Debug.Log("Enemies spawned");
+            }
+
+            i++;
+        }
+    }
+
+    void spawnItems(){
+
     }
 }
 

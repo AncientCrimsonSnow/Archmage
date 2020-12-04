@@ -7,6 +7,12 @@ public class EnemyAI : MonoBehaviour
 {
 
     public Transform target;
+    public Transform target2;
+    
+    public GameObject player;
+
+
+    public int range;
 
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
@@ -21,18 +27,20 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player =  GameObject.FindWithTag("Player");
+        target2 = player.transform;
+
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
-
         InvokeRepeating("UpdatePath", 0f, .5f);
+
     }
 
     void UpdatePath(){
-
         if(seeker.IsDone()){
             //  Enemy Position, Target Position Calback Funtion
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            seeker.StartPath(rb.position, target2.position, OnPathComplete);
         }
     }
 
@@ -46,25 +54,33 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(path == null)
-            return;
-    
-        if(currentWaypoint >= path.vectorPath.Count){
-            reachedEndOfPath = true;
-            return;
-        } else{
-            reachedEndOfPath = false;
-        }
+        
+        float distanceToPlayer = Vector2.Distance (target2.transform.position, rb.transform.position);
 
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-    
-        rb.AddForce(force);
+        //Debug.Log("The distance to the player is " + distanceToPlayer);
 
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+        if(distanceToPlayer < range){
 
-        if(distance < nextWaypointDistance){
-            currentWaypoint++;
+            if(path == null)
+                return;
+        
+            if(currentWaypoint >= path.vectorPath.Count){
+                reachedEndOfPath = true;
+                return;
+            } else{
+                reachedEndOfPath = false;
+            }
+
+            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+            Vector2 force = direction * speed * Time.deltaTime;
+        
+            rb.AddForce(force);
+
+            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+            if(distance < nextWaypointDistance){
+                currentWaypoint++;
+            }
         }
     }
 }

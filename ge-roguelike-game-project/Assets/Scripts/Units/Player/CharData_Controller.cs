@@ -9,7 +9,7 @@ using UnityEditor.U2D.Common;
 
 public class CharData_Controller
 {
-    public CharData _CharData;
+    public CharData _CharData = new CharData();
 
     public CharData_Controller(string name)
     {
