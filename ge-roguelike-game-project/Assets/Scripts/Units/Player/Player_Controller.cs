@@ -13,6 +13,7 @@ public class Player_Controller : MonoBehaviour
     private Movement_Controller _movementController;
     public CharData_Controller _charDataController;
     private Animator _animator;
+    public bool loading;
     
     // Start is called before the first frame update
     void Start()
@@ -31,19 +32,23 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        loading = GameObject.Find("Canvas").GetComponent<GameSession>().loading;
         //Movement
-        _movementController.move(_charDataController._CharData.MoveSpeed, cam);
-        _animator.SetBool("isWalking", _movementController.isWalking);
+        if (!loading)
+        {
+            _movementController.move(_charDataController._CharData.MoveSpeed, cam);
+            _animator.SetBool("isWalking", _movementController.isWalking);
 
-        //Shooting
-        if (Input.GetButtonDown("Fire1"))
-        {
-            _animator.SetBool("isShooting", true);
-            spell.GetComponent<BaseSpell>().Shoot(firePoint);
-        }
-        else
-        {
-            _animator.SetBool("isShooting", false);
+            //Shooting
+            if (Input.GetButtonDown("Fire1"))
+            {
+                _animator.SetBool("isShooting", true);
+                spell.GetComponent<BaseSpell>().Shoot(firePoint);
+            }
+            else
+            {
+                _animator.SetBool("isShooting", false);
+            }
         }
     }
 }

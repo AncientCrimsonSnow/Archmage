@@ -8,7 +8,7 @@ public class GameSession : MonoBehaviour
 {
     public string gameOverScene;
     public int currentGameLevel = 1;
-
+    public bool loading = true;
     private void Awake()
     {
         int numGameSession = FindObjectsOfType<GameSession>().Length;

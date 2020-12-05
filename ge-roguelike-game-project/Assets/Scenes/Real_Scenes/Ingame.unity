@@ -143,6 +143,7 @@ MonoBehaviour:
   spell: {fileID: 8772627405091265383, guid: a67d1694df859554988138354ee3bd68, type: 3}
   firePoint: {fileID: 1640417373}
   cam: {fileID: 519420031}
+  loading: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

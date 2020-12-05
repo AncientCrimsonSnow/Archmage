@@ -63,6 +63,7 @@ public class RoomTemplates : MonoBehaviour
             gridGraph.SetDimensions(width, height, nodeSize);
 
             */
+            
             spawnBoss();
             spawnMobs();
 
@@ -75,6 +76,8 @@ public class RoomTemplates : MonoBehaviour
         Instantiate(boss, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
         Debug.Log("Boss spawned at: " + rooms[rooms.Count - 1].transform.position);
         spawnedBoss = true;
+        
+        
     }
 
     void spawnMobs(){

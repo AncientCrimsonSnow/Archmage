@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     
     public GameObject player;
 
+    public bool loading;
 
     public int range;
 
@@ -54,7 +55,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        loading = GameObject.Find("Canvas").GetComponent<GameSession>().loading;
         float distanceToPlayer = Vector2.Distance (target2.transform.position, rb.transform.position);
 
         //Debug.Log("The distance to the player is " + distanceToPlayer);
@@ -73,9 +74,11 @@ public class EnemyAI : MonoBehaviour
 
             Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
             Vector2 force = direction * speed * Time.deltaTime;
-        
-            rb.AddForce(force);
 
+            if (!loading)
+            {
+                rb.AddForce(force);
+            }
             float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
             if(distance < nextWaypointDistance){
