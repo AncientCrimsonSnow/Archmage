@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
     void Die(){
         Destroy(gameObject);
 
-        if(gameObject.name == "BossMonster"){
+        if(gameObject.tag == "Boss"){
             StartCoroutine(FindObjectOfType<LevelExit>().LoadNextLevel());
         }
     }
