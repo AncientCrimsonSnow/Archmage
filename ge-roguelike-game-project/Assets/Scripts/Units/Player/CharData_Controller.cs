@@ -5,7 +5,6 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Reflection;
-using UnityEditor.U2D.Common;
 
 public class CharData_Controller
 {

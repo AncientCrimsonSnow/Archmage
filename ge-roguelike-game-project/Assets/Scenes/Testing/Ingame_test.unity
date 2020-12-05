@@ -250,12 +250,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1695483464, guid: 135e76e51c96f4db3bbf9906361ed00a, type: 3}
       propertyPath: mainMenuScene
-      value: MainSceneUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1909555368806002561, guid: 135e76e51c96f4db3bbf9906361ed00a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: MainSceneUI_test
       objectReference: {fileID: 0}
     - target: {fileID: 5400318039947044892, guid: 135e76e51c96f4db3bbf9906361ed00a,
         type: 3}
@@ -385,7 +380,7 @@ PrefabInstance:
     - target: {fileID: 7631806702687853021, guid: 135e76e51c96f4db3bbf9906361ed00a,
         type: 3}
       propertyPath: gameOverScene
-      value: GameOverUI
+      value: GameOverUI_test
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 135e76e51c96f4db3bbf9906361ed00a, type: 3}
@@ -823,11 +818,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3722689636219770187, guid: 6cb1fc846a35d40589de4ece2aaa1e44,
-        type: 3}
-      propertyPath: m_BlockingMask.m_Bits
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3722689636219770189, guid: 6cb1fc846a35d40589de4ece2aaa1e44,
         type: 3}
