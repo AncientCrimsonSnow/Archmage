@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testing/Dasha/LatestVersion_Final 1.unity
     guid: f8630874f8c9b451fabfe81dd4f154fc
+  - enabled: 1
+    path: Assets/Scenes/Testing/Dasha/LevelLoader.unity
+    guid: 240ae972bd03a458c837cf6f2b981cc9
+  - enabled: 1
+    path: Assets/Scenes/Testing/Dasha/DK_GameOverScene.unity
+    guid: 2f5bedbab60e440cea07283b212daadf
   m_configObjects: {}

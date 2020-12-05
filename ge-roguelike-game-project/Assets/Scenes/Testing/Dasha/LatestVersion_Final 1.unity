@@ -2162,8 +2162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd3461e3ded0451392346332a8e112b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameScene: DK_Playable_Ingame 1
-  continueButton: {fileID: 0}
+  loadingScene: LevelLoader
 --- !u!1 &1916419652
 GameObject:
   m_ObjectHideFlags: 0
