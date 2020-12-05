@@ -1973,6 +1973,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7631806702687853021, guid: 135e76e51c96f4db3bbf9906361ed00a,
+        type: 3}
+      propertyPath: gameOverScene
+      value: DK_GameOverScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 135e76e51c96f4db3bbf9906361ed00a, type: 3}
 --- !u!1001 &3722689636006328830
