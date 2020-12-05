@@ -9,10 +9,19 @@ public class Enemy : MonoBehaviour
     public float damageTimeout = .2f;
     private bool canTakeDamage = true;
 
+
+    public int dungeonLevel;
     public int enemyDamage = 10;
 
     public int enemyHealth = 100;
 
+    void Start(){
+        dungeonLevel = GameObject.Find("Canvas").GetComponent<GameSession>().currentGameLevel;
+        Debug.Log("DungeonLevel: " + dungeonLevel);
+
+        enemyDamage = enemyDamage * dungeonLevel;
+        enemyHealth = enemyHealth * dungeonLevel;
+    }
 
     // When the object holding the script enemy collides with another object this whill be triggered
     private void OnTriggerEnter2D(Collider2D other)
