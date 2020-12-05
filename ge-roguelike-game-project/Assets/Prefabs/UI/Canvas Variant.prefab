@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1909555368806002561}
-  mainMenuScene: LatestVersion_Final 1
+  mainMenuScene: MainScene
 --- !u!1001 &1909555369734639378
 PrefabInstance:
   m_ObjectHideFlags: 0

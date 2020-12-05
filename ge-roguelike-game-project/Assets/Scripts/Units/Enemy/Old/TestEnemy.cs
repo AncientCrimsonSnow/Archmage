@@ -6,6 +6,6 @@ public class TestEnemy : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        StartCoroutine(FindObjectOfType<LevelExit>().LoadNextLevel());
+        //FindObjectOfType<LevelExit>().LoadNextLevel();
     }
 }

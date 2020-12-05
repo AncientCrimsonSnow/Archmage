@@ -9,16 +9,16 @@ public class LevelExit : MonoBehaviour
     private float levelLoadDelay = 2f;
     public Animator transition;
 
-    public IEnumerator LoadNextLevel()
+    public void LoadNextLevel()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         if (Application.CanStreamedLevelBeLoaded(currentSceneIndex))
         {
-
             Debug.Log("Trying to load next level ");
-            transition.SetTrigger("Start");
-            yield return new WaitForSecondsRealtime(levelLoadDelay);
+            
+            //transition.SetTrigger("Start");
+            //yield return new WaitForSecondsRealtime(levelLoadDelay);
             
             SceneManager.LoadScene(currentSceneIndex, LoadSceneMode.Single);
             FindObjectOfType<GameSession>().AddToGameLevel();
