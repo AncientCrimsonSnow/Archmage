@@ -23,7 +23,7 @@ public class GameSession : MonoBehaviour
     }
     // Start is called before the first frame update
     void Start()
-    { ;
+    { 
         FindObjectOfType<UIManager>().UpdateGameLevel(currentGameLevel);
     }
 
@@ -35,6 +35,7 @@ public class GameSession : MonoBehaviour
     {
         currentGameLevel++;
         FindObjectOfType<UIManager>().UpdateGameLevel(currentGameLevel);
+        //SceneManager.LoadScene(3);
     }
 
     private void ResetGameSession()

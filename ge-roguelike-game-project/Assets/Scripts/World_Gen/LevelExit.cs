@@ -13,12 +13,14 @@ public class LevelExit : MonoBehaviour
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (Application.CanStreamedLevelBeLoaded(currentSceneIndex + 1))
+        if (Application.CanStreamedLevelBeLoaded(3))
         {
+
+            Debug.Log("Trying to load next level ");
             transition.SetTrigger("Start");
             yield return new WaitForSecondsRealtime(levelLoadDelay);
             
-            SceneManager.LoadScene(currentSceneIndex + 1);
+            SceneManager.LoadScene(3);
             FindObjectOfType<GameSession>().AddToGameLevel();
         }
         else
