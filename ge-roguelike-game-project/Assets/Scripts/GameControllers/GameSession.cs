@@ -35,7 +35,6 @@ public class GameSession : MonoBehaviour
     {
         currentGameLevel++;
         FindObjectOfType<UIManager>().UpdateGameLevel(currentGameLevel);
-        //SceneManager.LoadScene(3);
     }
 
     private void ResetGameSession()
