@@ -46,6 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PauseMenu
+    uniqueID: 1841213165
+    locked: 0
   - name: Enemy
     uniqueID: 992828315
     locked: 0
