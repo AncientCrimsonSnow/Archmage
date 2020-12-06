@@ -35,9 +35,7 @@ public class GameLoader : MonoBehaviour
             if(slider)
             {
                 float progress = Mathf.Clamp01(operation.progress / .9f);
-
                 slider.value = progress;
-
                 progressText.text = progress * 100f + "%";
 
                 yield return new WaitForEndOfFrame();

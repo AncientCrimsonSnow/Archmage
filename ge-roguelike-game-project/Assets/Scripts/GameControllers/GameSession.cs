@@ -8,11 +8,11 @@ public class GameSession : MonoBehaviour
 {
     public string gameOverScene;
     public int currentGameLevel = 1;
-    public bool loading = false;
     public float levelsize = 20;
-
+    
     private void Awake()
     {
+        GameObject.Find("Canvas").GetComponent<LevelComplete>().HideLevelComplete();
         int numGameSession = FindObjectsOfType<GameSession>().Length;
         if (numGameSession > 1)
         {
@@ -47,7 +47,6 @@ public class GameSession : MonoBehaviour
 
     private void ResetGameSession()
     {
-        //Debug.Log("Test");
         SceneManager.LoadScene(gameOverScene);
         Destroy(gameObject);
     }

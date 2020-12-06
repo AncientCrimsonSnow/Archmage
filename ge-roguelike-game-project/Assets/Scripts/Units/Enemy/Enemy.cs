@@ -17,7 +17,6 @@ public class Enemy : MonoBehaviour
 
     void Start(){
         dungeonLevel = GameObject.Find("Canvas").GetComponent<GameSession>().currentGameLevel;
-        //Debug.Log("DungeonLevel: " + dungeonLevel);
 
         enemyDamage = enemyDamage * dungeonLevel;
         enemyHealth = enemyHealth * dungeonLevel;
@@ -52,7 +51,9 @@ public class Enemy : MonoBehaviour
     void Die(){
         Destroy(gameObject);
         GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.addExp(25);
+
         if(gameObject.tag == "Boss"){
+            GameObject.Find("Canvas").GetComponent<LevelComplete>().DisplayLevelComplete();
             FindObjectOfType<LevelExit>().LoadNextLevel();
             GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.addExp(50);
         }
