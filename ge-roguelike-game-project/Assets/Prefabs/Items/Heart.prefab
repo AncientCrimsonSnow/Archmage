@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heal: 20
   strength: 0
-  exp: 5
+  exp: 10
   speed: 0
 --- !u!50 &-9013102258845693416
 Rigidbody2D:
