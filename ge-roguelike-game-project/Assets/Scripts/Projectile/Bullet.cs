@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
         //Debug.Log(damageAmount);
         Enemy enemy = collision.GetComponent<Enemy>();
 
-        Debug.Log("Hit enemy " + collision.tag);
+        //Debug.Log("Hit enemy " + collision.tag);
         if (collision.CompareTag("Boss"))
         {
 

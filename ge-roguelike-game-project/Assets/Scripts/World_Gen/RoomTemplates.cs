@@ -28,10 +28,11 @@ public class RoomTemplates : MonoBehaviour
     private bool spawnedBoss = false;
     public GameObject boss;
     public GameObject enemy;
+    public GameObject item;
 
     private GameObject findSpawnpoint;
 
-    Vector3 enemyPos;
+    Vector3 enemyPos, itemPos;
     //Random random = new UnityEngine.Random();
     
     private void Update()
@@ -66,6 +67,7 @@ public class RoomTemplates : MonoBehaviour
             
             spawnBoss();
             spawnMobs();
+            spawnItems();
 
             AstarPath.active.Scan();
             //Debug.Log("Current Hardcap on Roomspawning is: " + roomSpawnCap);
@@ -106,7 +108,22 @@ public class RoomTemplates : MonoBehaviour
     }
 
     void spawnItems(){
+        //item
 
+        foreach (var room in rooms)
+        {
+            float perc = UnityEngine.Random.Range(0.0f, 1.0f);
+            //Debug.Log(perc);
+            // random.NextDouble() * (maximum - minimum) + minimum;
+            if(perc <= 0.01f){
+                itemPos = randomPosInRoom(room);
+
+                //Debug.Log("Room position: " + room.transform.position.y);
+
+                // Instantiate(enemy, room.transform.position, Quaternion.identity);
+                Instantiate(item, itemPos, Quaternion.identity);
+            }
+        }
     }
 
     public Vector3 randomPosInRoom(GameObject room){

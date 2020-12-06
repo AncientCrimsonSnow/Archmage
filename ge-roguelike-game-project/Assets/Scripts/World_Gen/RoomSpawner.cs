@@ -29,7 +29,7 @@ public class RoomSpawner : MonoBehaviour
     {
         hardCap = GameObject.Find("Canvas").GetComponent<GameSession>().levelsize;
         softCap = (float) (hardCap * 0.7);
-        Debug.Log(hardCap);
+        //Debug.Log(hardCap);
         distanceToSpawn_Pow = transform.position.x * transform.position.x + transform.position.y * transform.position.y;
         Destroy(gameObject, waitTime);
         templates = GameObject.Find("Room Templates").GetComponent<RoomTemplates>();
