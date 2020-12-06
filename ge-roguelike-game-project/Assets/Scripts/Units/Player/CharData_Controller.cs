@@ -82,6 +82,16 @@ public class CharData_Controller
             _CharData.CurrentHp = _CharData.MAXHp;
         }
     }
+    public void addSpeed(int moveSpeed)
+    {
+        _CharData.MoveSpeed += moveSpeed;
+        Debug.Log("New Speed = " + _CharData.MoveSpeed);
+    }
+    public void addStrength(int strength)
+    {
+        _CharData.Strength += strength;
+        Debug.Log("New Strength = " + _CharData.Strength);
+    }
     public void saveData()
     {
         BinaryFormatter bf = new BinaryFormatter();

@@ -603,6 +603,7 @@ MonoBehaviour:
   spawning: 1
   boss: {fileID: 8104343857634065107, guid: e32418a6649056142a217379e52d767c, type: 3}
   enemy: {fileID: 1170397271456658219, guid: 9076044d293e25c42ab78bccd731cd3a, type: 3}
+  item: {fileID: 3278935835056572947, guid: 543554aff79f5634489e4ff880300dae, type: 3}
 --- !u!4 &1619802572
 Transform:
   m_ObjectHideFlags: 0
