@@ -15,9 +15,8 @@ public class Player_Controller : MonoBehaviour
     private Animator _animator;
     public bool loading;
     
-    // Start is called before the first frame update
-    void Start()
-    {
+
+    public void Init(){
         _charDataController = new CharData_Controller(charName);
         _movementController = new Movement_Controller(gameObject.GetComponent<Rigidbody2D>());
         _animator = GetComponent<Animator>();

@@ -9,6 +9,7 @@ public class GameSession : MonoBehaviour
     public string gameOverScene;
     public int currentGameLevel = 1;
     public bool loading = false;
+
     private void Awake()
     {
         int numGameSession = FindObjectsOfType<GameSession>().Length;
@@ -21,9 +22,13 @@ public class GameSession : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
+        GameObject.Find("Player").GetComponent<Player_Controller>().Init();
+
         string playerName = GameObject.Find("Playername_save").GetComponent<PlayerName_save>().playerName;
         GameObject.Find("Player").GetComponent<Player_Controller>().charName = playerName;
-        Destroy(GameObject.Find("Playername_save"));
+        Debug.Log("############################");
+        GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.doDmg(0);
+        //Destroy(GameObject.Find("Playername_save"));
     }
     // Start is called before the first frame update
     void Start()
@@ -43,7 +48,7 @@ public class GameSession : MonoBehaviour
 
     private void ResetGameSession()
     {
-        Debug.Log("Test");
+        //Debug.Log("Test");
         SceneManager.LoadScene(gameOverScene);
         Destroy(gameObject);
     }
