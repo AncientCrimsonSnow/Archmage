@@ -55,7 +55,6 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //isLoading = GameObject.Find("Player").GetComponent<Player_Controller>()._LoadingScreen.isLoading;
         isLoading = LoadingScreen.isLoading;
 
         float distanceToPlayer = Vector2.Distance (target2.transform.position, rb.transform.position);

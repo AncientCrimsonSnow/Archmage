@@ -27,7 +27,6 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //isLoading = _LoadingScreen.isLoading;
         isLoading = LoadingScreen.isLoading;
         //Movement
         if (!isLoading)
