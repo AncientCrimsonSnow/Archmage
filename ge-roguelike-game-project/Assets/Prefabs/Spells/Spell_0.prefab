@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Spell_0
-  projectilePrefab: {fileID: 2969776561369301592, guid: 5254dea61faffdd489d074902755c4de,
+  projectilePrefab: {fileID: 2530487744961601047, guid: 531d0d13f9ce9f24094accf589c616b5,
     type: 3}
   speed: 10
   shootBehavior_x: straight

@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
 
     void Start(){
         dungeonLevel = GameObject.Find("Canvas").GetComponent<GameSession>().currentGameLevel;
-        Debug.Log("DungeonLevel: " + dungeonLevel);
+        //Debug.Log("DungeonLevel: " + dungeonLevel);
 
         enemyDamage = enemyDamage * dungeonLevel;
         enemyHealth = enemyHealth * dungeonLevel;
