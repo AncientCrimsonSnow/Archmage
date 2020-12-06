@@ -43,12 +43,11 @@ GameObject:
   - component: {fileID: 2275356686325881934}
   - component: {fileID: 8916979238698079477}
   - component: {fileID: 3037272265157589923}
-  - component: {fileID: 510415490665753197}
   - component: {fileID: 4332739576041976915}
-  - component: {fileID: 4332739576041976917}
+  - component: {fileID: 4587049157943008816}
   m_Layer: 0
-  m_Name: Player_Mage
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7df26783d7790ac4b85d5aeb48455b76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -171,22 +170,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &510415490665753197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6642924226721224932}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c07ab75086716a49a5db139c975a3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 2594147958094884445}
-  bulletPrefab: {fileID: 2969776561369301592, guid: 5254dea61faffdd489d074902755c4de,
-    type: 3}
-  bulletForce: 10
 --- !u!95 &4332739576041976915
 Animator:
   serializedVersion: 3
@@ -206,7 +189,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4332739576041976917
+--- !u!114 &4587049157943008816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,14 +198,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6642924226721224932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4e683eab6931344e8eb0dcb7fbb1e29, type: 3}
+  m_Script: {fileID: 11500000, guid: 077695f147e24c24fa54d86006342966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charName: 
+  spell: {fileID: 8772627405091265383, guid: a67d1694df859554988138354ee3bd68, type: 3}
   firePoint: {fileID: 2594147958094884445}
-  bulletPrefab: {fileID: 2969776561369301592, guid: 5254dea61faffdd489d074902755c4de,
-    type: 3}
-  bulletForce: 8
-  bulletDamage: 10
-  movespeed: 3
-  rb: {fileID: 3037272265157589923}
   cam: {fileID: 0}
+  isLoading: 0

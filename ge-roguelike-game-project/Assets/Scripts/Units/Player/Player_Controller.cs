@@ -18,6 +18,7 @@ public class Player_Controller : MonoBehaviour
 
     public void Init(){
         _charDataController = new CharData_Controller(charName);
+        Debug.Log("Charnameis :" + charName);
         _movementController = new Movement_Controller(gameObject.GetComponent<Rigidbody2D>());
         _animator = GetComponent<Animator>();
         spell.GetComponent<BaseSpell>().Init();

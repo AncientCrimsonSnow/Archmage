@@ -22,9 +22,10 @@ public class GameSession : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
-        GameObject.Find("Player").GetComponent<Player_Controller>().Init();
+        
         string playerName = GameObject.Find("Playername_save").GetComponent<PlayerName_save>().playerName;
         GameObject.Find("Player").GetComponent<Player_Controller>().charName = playerName;
+        GameObject.Find("Player").GetComponent<Player_Controller>().Init();
         GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.doDmg(0);
         //Destroy(GameObject.Find("Playername_save"));
     }
@@ -42,6 +43,7 @@ public class GameSession : MonoBehaviour
     {
         currentGameLevel++;
         levelsize += 5;
+        //Debug.Log("Levelsize: " + levelsize);
         FindObjectOfType<UIManager>().UpdateGameLevel(currentGameLevel);
     }
 

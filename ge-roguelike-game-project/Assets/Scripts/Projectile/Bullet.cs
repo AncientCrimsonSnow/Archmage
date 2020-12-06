@@ -6,6 +6,14 @@ public class Bullet : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
+
+        AudioSource shotSource;
+
+        void Start(){
+            shotSource = GetComponent<AudioSource>();
+            shotSource.Play();
+        }
+        
         int damageAmount = GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController._CharData.Strength; 
         //Debug.Log(damageAmount);
         Enemy enemy = collision.GetComponent<Enemy>();

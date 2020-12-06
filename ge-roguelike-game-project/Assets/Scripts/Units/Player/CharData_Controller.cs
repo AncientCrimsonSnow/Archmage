@@ -56,6 +56,8 @@ public class CharData_Controller
         //Debug.Log(_CharData.MAXExpToLvlUp);
         Debug.Log("HP:" + _CharData.CurrentHp + "/" + _CharData.MAXHp);
         //Debug.Log(_CharData.CurrentHp);
+
+        GameObject.FindObjectOfType<UIManager>().UpdateLives(_CharData.CurrentHp);
     }
 
     public void doDmg(int dmg)
