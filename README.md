@@ -15,7 +15,7 @@
 -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
@@ -143,9 +143,8 @@ Project Link: [https://github.com/MaxxiP/GT2-Game-Engines-Unity](https://github.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://github.com/MaxxiP/GT2-Game-Engines-Unity?style=flat-square
+
+[contributors-shield]: https://img.shields.io/github/contributors/MaxxiP/GT2-Game-Engines-Unity
 [contributors-url]: https://github.com/MaxxiP/GT2-Game-Engines-Unity/graphs/contributors
-[issues-shield]: https://github.com/MaxxiP/GT2-Game-Engines-Unity?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/MaxxiP/GT2-Game-Engines-Unity
 [issues-url]: https://github.com/MaxxiP/GT2-Game-Engines-Unity/issues
-[license-shield]: https://github.com/MaxxiP/GT2-Game-Engines-Unity?style=flat-square
-[license-url]: https://github.com/MaxxiP/GT2-Game-Engines-Unity/blob/master/LICENSE
