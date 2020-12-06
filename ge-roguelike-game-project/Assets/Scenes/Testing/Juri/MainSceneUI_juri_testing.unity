@@ -3189,7 +3189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd3461e3ded0451392346332a8e112b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScene: Ingame_juri
+  loadingScene: Ingame_juri_testing
 --- !u!114 &1784850328
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log(other);
             other.GetComponent<Player_Controller>()._charDataController.doDmg(enemyDamage);
+            Debug.Log("Did damage -<< " + enemyDamage);
             StartCoroutine(damageTimer());
         }
     }

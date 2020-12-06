@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testing/Juri/MainSceneUI_juri.unity
     guid: e8603c5f494fb7840b99267eb5f9f91c
+  - enabled: 1
+    path: Assets/Scenes/Testing/Juri/Ingame_juri_testing.unity
+    guid: 208fb067e613fb047b71a9f2458c539f
   m_configObjects: {}
