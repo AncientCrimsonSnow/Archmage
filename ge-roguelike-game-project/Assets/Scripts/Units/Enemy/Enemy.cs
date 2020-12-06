@@ -54,8 +54,8 @@ public class Enemy : MonoBehaviour
 
         if(gameObject.tag == "Boss"){
             GameObject.Find("Canvas").GetComponent<LevelComplete>().DisplayLevelComplete();
-            FindObjectOfType<LevelExit>().LoadNextLevel();
             GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.addExp(50);
+            FindObjectOfType<LevelExit>().LoadNextLevel();
         }
     }
 

@@ -34,7 +34,7 @@ public class CharData_Controller
     public void addExp(int exp)
     {
         _CharData.Exp += exp;
-        //Debug.Log("Char EXP: " + _CharData.Exp + "/" + _CharData.MAXExpToLvlUp);
+        Debug.Log("Char EXP: " + _CharData.Exp + "/" + _CharData.MAXExpToLvlUp);
         //Debug.Log(_CharData.MAXExpToLvlUp);
         //Lvl up by reaching max exp:
         if (_CharData.Exp >= _CharData.MAXExpToLvlUp)
