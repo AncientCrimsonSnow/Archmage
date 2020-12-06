@@ -14,6 +14,8 @@ public class Player_Controller : MonoBehaviour
     public CharData_Controller _charDataController;
     private Animator _animator;
     public bool isLoading;
+
+    AudioSource shotSound;
     //public LoadingScreen _LoadingScreen;
 
     public void Init(){
@@ -23,6 +25,8 @@ public class Player_Controller : MonoBehaviour
         _animator = GetComponent<Animator>();
         spell.GetComponent<BaseSpell>().Init();
         FindObjectOfType<UIManager>().SetMaxHP(_charDataController._CharData.MAXHp);
+
+        shotSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,6 +42,9 @@ public class Player_Controller : MonoBehaviour
             //Shooting
             if (Input.GetButtonDown("Fire1"))
             {
+
+                shotSound.Play();
+                
                 _animator.SetBool("isShooting", true);
                 spell.GetComponent<BaseSpell>().Shoot(firePoint);
             }
