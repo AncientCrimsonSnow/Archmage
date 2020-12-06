@@ -28,19 +28,32 @@ public class RoomTemplates : MonoBehaviour
     private bool spawnedBoss = false;
     public GameObject boss;
     public GameObject enemy;
-    public GameObject item;
+
+    public GameObject healItem;
+    public GameObject powerUp;
+    public GameObject speedUp;
+    public GameObject expUp;
+
+    List<GameObject> itemList;
+
+    
 
     private GameObject findSpawnpoint;
 
     Vector3 enemyPos, itemPos;
     //Random random = new UnityEngine.Random();
+
+    void Start(){
+        itemList = new List<GameObject>();
+
+        itemList.Add(healItem);
+        itemList.Add(powerUp);
+        itemList.Add(speedUp);
+        itemList.Add(expUp);
+    }
     
     private void Update()
     {
-        //float roomspawner = gameObject.GetComponent<RoomSpawner>().hardCap;
-        //float roomSpawnCap = roomspawner.hardCap;
-        //Debug.Log(roomspawner);
-
         findSpawnpoint = GameObject.FindWithTag("Spawnpoint");
      
         if (findSpawnpoint is null)
@@ -50,21 +63,6 @@ public class RoomTemplates : MonoBehaviour
         
         if (!spawning && !spawnedBoss)
         {
-            /* This holds all graph data
-            AstarData data = AstarPath.active.data;
-
-            // This creates a Grid Graph
-            GridGraph gridGraph = data.AddGraph(typeof(GridGraph)) as GridGraph;
-
-
-            int width = 100;
-            int height = 100;
-            float nodeSize = 0.3f;
-
-            gridGraph.SetDimensions(width, height, nodeSize);
-
-            */
-            
             spawnBoss();
             spawnMobs();
             spawnItems();
@@ -108,26 +106,30 @@ public class RoomTemplates : MonoBehaviour
     }
 
     void spawnItems(){
-        //item
 
         foreach (var room in rooms)
         {
+            //Debug.Log("Spawning Items ###");
+            //Debug.Log(itemList.Count + " Items in current List");
+
+
             float perc = UnityEngine.Random.Range(0.0f, 1.0f);
             //Debug.Log(perc);
             // random.NextDouble() * (maximum - minimum) + minimum;
-            if(perc <= 0.1f){
+            if(perc <= 0.05){
+                int itemNumb = UnityEngine.Random.Range(0, itemList.Count);
                 itemPos = randomPosInRoom(room);
                 //Debug.Log("Room position: " + room.transform.position.y);
                 // Instantiate(enemy, room.transform.position, Quaternion.identity);
-                Instantiate(item, itemPos, Quaternion.identity);
+                Instantiate(itemList[itemNumb], itemPos, Quaternion.identity);
             }
         }
     }
 
     public Vector3 randomPosInRoom(GameObject room){
         Vector3 positionInRoom;
-        float rand_x = UnityEngine.Random.Range(-4, 4);
-        float rand_y = UnityEngine.Random.Range(-4, 4);
+        float rand_x = UnityEngine.Random.Range(-3, 3);
+        float rand_y = UnityEngine.Random.Range(-3, 3);
 
         rand_x += room.transform.position.x;
         rand_y += room.transform.position.y;

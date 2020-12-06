@@ -657,7 +657,10 @@ MonoBehaviour:
   spawning: 1
   boss: {fileID: 8104343857634065107, guid: e32418a6649056142a217379e52d767c, type: 3}
   enemy: {fileID: 1170397271456658219, guid: 9076044d293e25c42ab78bccd731cd3a, type: 3}
-  item: {fileID: 3278935835056572947, guid: 543554aff79f5634489e4ff880300dae, type: 3}
+  healItem: {fileID: 3309842395348896, guid: 021fd865538f0a34eb022cea991b53c5, type: 3}
+  powerUp: {fileID: 6314388746272472173, guid: fcdce0877dae5b04981aab14969b0cd8, type: 3}
+  speedUp: {fileID: 7616647258515932801, guid: f00ff7d67d32e9343a821ba0fa9c179d, type: 3}
+  expUp: {fileID: 4072179959076021897, guid: 36bb570800b2c05438c033b309eaea6e, type: 3}
 --- !u!4 &1619802572
 Transform:
   m_ObjectHideFlags: 0

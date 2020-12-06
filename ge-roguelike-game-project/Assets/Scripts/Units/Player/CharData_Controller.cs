@@ -84,7 +84,7 @@ public class CharData_Controller
             _CharData.CurrentHp = _CharData.MAXHp;
         }
     }
-    public void addSpeed(int moveSpeed)
+    public void addSpeed(float moveSpeed)
     {
         _CharData.MoveSpeed += moveSpeed;
         Debug.Log("New Speed = " + _CharData.MoveSpeed);

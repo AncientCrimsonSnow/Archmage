@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
     public int heal = 10;
     public int strength= 5;
     public int exp= 2;
-    public int speed = 1;
+    public float speed = 1;
 
 
     void Start()
