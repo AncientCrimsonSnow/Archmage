@@ -50,9 +50,10 @@ public class Enemy : MonoBehaviour
     // it will trigger the loading of the next level
     void Die(){
         Destroy(gameObject);
-
+        GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.addExp(25);
         if(gameObject.tag == "Boss"){
             FindObjectOfType<LevelExit>().LoadNextLevel();
+            GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.addExp(50);
         }
     }
 

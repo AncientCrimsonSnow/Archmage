@@ -96,7 +96,7 @@ public class RoomTemplates : MonoBehaviour
 
                 enemyPos = randomPosInRoom(room);
 
-                Debug.Log("Room position: " + room.transform.position.y);
+                //Debug.Log("Room position: " + room.transform.position.y);
 
                 // Instantiate(enemy, room.transform.position, Quaternion.identity);
                 Instantiate(enemy, enemyPos, Quaternion.identity);

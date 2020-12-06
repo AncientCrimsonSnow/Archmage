@@ -19,13 +19,9 @@ public class Player_Controller : MonoBehaviour
     void Start()
     {
         _charDataController = new CharData_Controller(charName);
-        //Test Purpose
-        _charDataController.ResetData(charName);
-        //
         _movementController = new Movement_Controller(gameObject.GetComponent<Rigidbody2D>());
         _animator = GetComponent<Animator>();
         spell.GetComponent<BaseSpell>().Init();
-        
         FindObjectOfType<UIManager>().SetMaxHP(_charDataController._CharData.MAXHp);
     }
 
@@ -33,6 +29,7 @@ public class Player_Controller : MonoBehaviour
     void Update()
     {
         loading = GameObject.Find("Canvas").GetComponent<GameSession>().loading;
+        Debug.Log(loading);
         //Movement
         if (!loading)
         {

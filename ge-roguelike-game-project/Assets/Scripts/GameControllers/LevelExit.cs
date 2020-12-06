@@ -11,6 +11,7 @@ public class LevelExit : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.saveData();
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         if (Application.CanStreamedLevelBeLoaded(currentSceneIndex))

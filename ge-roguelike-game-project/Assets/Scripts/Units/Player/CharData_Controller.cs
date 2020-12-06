@@ -34,17 +34,27 @@ public class CharData_Controller
     public void addExp(int exp)
     {
         _CharData.Exp += exp;
+        Debug.Log(_CharData.Exp);
+        Debug.Log(_CharData.MAXExpToLvlUp);
         //Lvl up by reaching max exp:
         if (exp >= _CharData.MAXExpToLvlUp)
         {
             lvlUp();
-            _CharData.Exp -= _CharData.MAXExpToLvlUp;
         }
     }
-
     public void lvlUp()
     {
         _CharData.Lvl++;
+        _CharData.Strength += 5;
+        _CharData.MAXHp += 10;
+        _CharData.CurrentHp = _CharData.MAXHp;
+        _CharData.Exp -= _CharData.MAXExpToLvlUp;
+        _CharData.MAXExpToLvlUp += (int) Math.Round(_CharData.MAXExpToLvlUp * 1.1f);
+        
+        Debug.Log(_CharData.Exp);
+        Debug.Log(_CharData.MAXExpToLvlUp);
+        Debug.Log(_CharData.MAXHp);
+        Debug.Log(_CharData.CurrentHp);
     }
 
     public void doDmg(int dmg)
@@ -131,7 +141,7 @@ public class CharData
     }
 
     [SerializeField]
-    private float strength;
+    private int strength;
     [SerializeField]
     private float moveSpeed;
 
@@ -164,7 +174,7 @@ public class CharData
         set => exp = value;
     }
 
-    public float Strength
+    public int Strength
     {
         get => strength;
         set => strength = value;

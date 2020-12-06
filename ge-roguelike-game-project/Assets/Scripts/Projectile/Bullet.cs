@@ -6,8 +6,9 @@ public class Bullet : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        int damageAmount = 10;
-                    Enemy enemy = collision.GetComponent<Enemy>();
+        int damageAmount = GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController._CharData.Strength; 
+        Debug.Log(damageAmount);
+        Enemy enemy = collision.GetComponent<Enemy>();
 
         if (collision.CompareTag("Boss"))
         {

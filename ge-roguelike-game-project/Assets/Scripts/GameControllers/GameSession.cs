@@ -8,7 +8,7 @@ public class GameSession : MonoBehaviour
 {
     public string gameOverScene;
     public int currentGameLevel = 1;
-    public bool loading = true;
+    public bool loading = false;
     private void Awake()
     {
         int numGameSession = FindObjectsOfType<GameSession>().Length;
@@ -20,6 +20,10 @@ public class GameSession : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+
+        string playerName = GameObject.Find("Playername_save").GetComponent<PlayerName_save>().playerName;
+        GameObject.Find("Player").GetComponent<Player_Controller>().charName = playerName;
+        Destroy(GameObject.Find("Playername_save"));
     }
     // Start is called before the first frame update
     void Start()
