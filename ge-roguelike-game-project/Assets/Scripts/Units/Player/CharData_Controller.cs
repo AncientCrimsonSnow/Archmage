@@ -34,13 +34,17 @@ public class CharData_Controller
     public void addExp(int exp)
     {
         _CharData.Exp += exp;
+        
         Debug.Log("Char EXP: " + _CharData.Exp + "/" + _CharData.MAXExpToLvlUp);
         //Debug.Log(_CharData.MAXExpToLvlUp);
         //Lvl up by reaching max exp:
+
         if (_CharData.Exp >= _CharData.MAXExpToLvlUp)
         {
             lvlUp();
         }
+
+        GameObject.FindObjectOfType<UIManager>().UpdateExp(_CharData.Exp);
     }
     public void lvlUp()
     {
@@ -53,11 +57,12 @@ public class CharData_Controller
         
         Debug.Log("LEVEL UP!");
         Debug.Log("EXP:" + _CharData.Exp + "/" + _CharData.MAXExpToLvlUp);
-        //Debug.Log(_CharData.MAXExpToLvlUp);
         Debug.Log("HP:" + _CharData.CurrentHp + "/" + _CharData.MAXHp);
-        //Debug.Log(_CharData.CurrentHp);
 
         GameObject.FindObjectOfType<UIManager>().UpdateLives(_CharData.CurrentHp);
+        GameObject.FindObjectOfType<UIManager>().SetMaxHP(_CharData.CurrentHp);
+        GameObject.FindObjectOfType<UIManager>().SetExpToNextLvl(_CharData.MAXExpToLvlUp);
+        GameObject.FindObjectOfType<UIManager>().UpdateExp(_CharData.Exp);
     }
 
     public void doDmg(int dmg)

@@ -25,6 +25,8 @@ public class Player_Controller : MonoBehaviour
         _animator = GetComponent<Animator>();
         spell.GetComponent<BaseSpell>().Init();
         FindObjectOfType<UIManager>().SetMaxHP(_charDataController._CharData.MAXHp);
+        FindObjectOfType<UIManager>().UpdateExp(_charDataController._CharData.Exp);
+        FindObjectOfType<UIManager>().SetExpToNextLvl(_charDataController._CharData.MAXExpToLvlUp);
 
         shotSound = GetComponent<AudioSource>();
     }
