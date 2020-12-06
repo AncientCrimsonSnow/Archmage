@@ -13,8 +13,8 @@ public class Player_Controller : MonoBehaviour
     private Movement_Controller _movementController;
     public CharData_Controller _charDataController;
     private Animator _animator;
-    public bool loading;
-    
+    public bool isLoading;
+    //public LoadingScreen _LoadingScreen;
 
     public void Init(){
         _charDataController = new CharData_Controller(charName);
@@ -27,10 +27,10 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        loading = GameObject.Find("Canvas").GetComponent<GameSession>().loading;
-        //Debug.Log(loading);
+        //isLoading = _LoadingScreen.isLoading;
+        isLoading = LoadingScreen.isLoading;
         //Movement
-        if (!loading)
+        if (!isLoading)
         {
             _movementController.move(_charDataController._CharData.MoveSpeed, cam);
             _animator.SetBool("isWalking", _movementController.isWalking);
