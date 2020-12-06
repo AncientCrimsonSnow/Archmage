@@ -47,15 +47,12 @@
   * [Features](#features)
   * [Assets](#assets)
   * [Built With](#built-with)
-* [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
 
 
 
@@ -87,20 +84,30 @@
 
 ### Explore the Game
 ![blue bottle](https://drive.google.com/uc?export=view&id=14JezH8uEH9pbMcZqRcvQxQu55RoSoJr5) The Speed potion will give you a permanent speed boost that will help you explore the different layers of the dungeon.
-![blue bottle](https://drive.google.com/uc?export=view&id=1D0bSN_yL82Q4_gZ9FMTKayaTZAp7OsY-) Like the name would suggest, the EXP potion grants the player a great amount of EXP when it's picked up or destroyed.
+<br />
+![green bottle](https://drive.google.com/uc?export=view&id=1D0bSN_yL82Q4_gZ9FMTKayaTZAp7OsY-) Like the name would suggest, the EXP potion grants the player a great amount of EXP when it's picked up or destroyed.
+<br />
 ![blue bottle](https://drive.google.com/uc?export=view&id=1GwiKIbjoSPq8IztjaDw-SOM2LhncwDUo) Without great strength you won't make it far in the dungeon, that's why you should always keep an eye out for a strength potion that provides a permanent boost for the spell damage.
-![blue bottle](https://drive.google.com/uc?export=view&id=1_HQKJyqOKUhvroNeoYMevlN6_YZ6-KIB) Last but for sure not least, the heart container will you guessed it replenish your current hp.
-
-![blue bottle](https://drive.google.com/uc?export=view&id=1KKBVHDE66hTTD5Ms62lwYUDxpGiZVQqG)
+<br />
+![red heart](https://drive.google.com/uc?export=view&id=1_HQKJyqOKUhvroNeoYMevlN6_YZ6-KIB) Last but for sure not least, the heart container will you guessed it replenish your current hp.
+<br />
+<br />
+![loading](https://drive.google.com/uc?export=view&id=1KKBVHDE66hTTD5Ms62lwYUDxpGiZVQqG)
+<br />
 There are two ways to start a new game, either by just starting the game with the start button or loading a character by typing in the name of the character/savegame. 
 In the screenshot above, you can see a character loaded that already reached level 5.
 
-![blue bottle](https://drive.google.com/uc?export=view&id=1Bc-Ik5zUFXBkAyNXuHMZFrQ1W1WBE-NM) In the dungeon you will encounter furious bats that will chase you down once you get to close to them, but there are good news as well, kill them and gain exp to become stronger and stronger.
+<br />
 
-![blue bottle](https://drive.google.com/uc?export=view&id=1BzSo8z1QAugVWdNSb1v4Z1ZHOGROD_OM) To move on to the next dungeon floor you have to beat the goblin that awaits to challenge you. Are you worthy of diving deeper and deeper into the abyss ?
+![bat](https://drive.google.com/uc?export=view&id=1Bc-Ik5zUFXBkAyNXuHMZFrQ1W1WBE-NM) In the dungeon you will encounter furious bats that will chase you down once you get to close to them, but there are good news as well, kill them and gain exp to become stronger and stronger.
 
+<br />
 
-![blue bottle](https://drive.google.com/uc?export=view&id=18RGBYEt4xxRoxD8LWMUbN3m4gOUyMzNl) 
+![boss](https://drive.google.com/uc?export=view&id=1BzSo8z1QAugVWdNSb1v4Z1ZHOGROD_OM) To move on to the next dungeon floor you have to beat the goblin that awaits to challenge you. Are you worthy of diving deeper and deeper into the abyss ?
+
+<br />
+
+![hero](https://drive.google.com/uc?export=view&id=18RGBYEt4xxRoxD8LWMUbN3m4gOUyMzNl) 
 Hey, handsome. Yeah I'm talking to you dear archmage. What brings you down to this filthy dungeon ? 
 You don't know ? Well okay then move forward with your fiery power.
 
@@ -164,3 +171,4 @@ Project Link: [https://github.com/MaxxiP/GT2-Game-Engines-Unity](https://github.
 [contributors-url]: https://github.com/MaxxiP/GT2-Game-Engines-Unity/graphs/contributors
 [issues-shield]: https://img.shields.io/github/issues/MaxxiP/GT2-Game-Engines-Unity
 [issues-url]: https://github.com/MaxxiP/GT2-Game-Engines-Unity/issues
+
