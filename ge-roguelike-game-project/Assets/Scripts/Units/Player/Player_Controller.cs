@@ -29,7 +29,7 @@ public class Player_Controller : MonoBehaviour
     void Update()
     {
         loading = GameObject.Find("Canvas").GetComponent<GameSession>().loading;
-        Debug.Log(loading);
+        //Debug.Log(loading);
         //Movement
         if (!loading)
         {

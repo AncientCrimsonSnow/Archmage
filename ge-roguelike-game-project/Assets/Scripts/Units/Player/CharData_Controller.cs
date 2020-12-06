@@ -34,10 +34,10 @@ public class CharData_Controller
     public void addExp(int exp)
     {
         _CharData.Exp += exp;
-        Debug.Log(_CharData.Exp);
-        Debug.Log(_CharData.MAXExpToLvlUp);
+        Debug.Log("Char EXP: " + _CharData.Exp + "/" + _CharData.MAXExpToLvlUp);
+        //Debug.Log(_CharData.MAXExpToLvlUp);
         //Lvl up by reaching max exp:
-        if (exp >= _CharData.MAXExpToLvlUp)
+        if (_CharData.Exp >= _CharData.MAXExpToLvlUp)
         {
             lvlUp();
         }
@@ -51,14 +51,16 @@ public class CharData_Controller
         _CharData.Exp -= _CharData.MAXExpToLvlUp;
         _CharData.MAXExpToLvlUp += (int) Math.Round(_CharData.MAXExpToLvlUp * 1.1f);
         
-        Debug.Log(_CharData.Exp);
-        Debug.Log(_CharData.MAXExpToLvlUp);
-        Debug.Log(_CharData.MAXHp);
-        Debug.Log(_CharData.CurrentHp);
+        Debug.Log("LEVEL UP!");
+        Debug.Log("EXP:" + _CharData.Exp + "/" + _CharData.MAXExpToLvlUp);
+        //Debug.Log(_CharData.MAXExpToLvlUp);
+        Debug.Log("HP:" + _CharData.CurrentHp + "/" + _CharData.MAXHp);
+        //Debug.Log(_CharData.CurrentHp);
     }
 
     public void doDmg(int dmg)
     {
+        Debug.Log("Calculate damage in chardatacontroller-- " + dmg);
         _CharData.CurrentHp -= dmg;
         //if player die
         
