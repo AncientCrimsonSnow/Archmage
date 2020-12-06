@@ -9,6 +9,7 @@ public class GameSession : MonoBehaviour
     public string gameOverScene;
     public int currentGameLevel = 1;
     public bool loading = false;
+    public float levelsize = 20;
 
     private void Awake()
     {
@@ -21,12 +22,9 @@ public class GameSession : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
-
         GameObject.Find("Player").GetComponent<Player_Controller>().Init();
-
         string playerName = GameObject.Find("Playername_save").GetComponent<PlayerName_save>().playerName;
         GameObject.Find("Player").GetComponent<Player_Controller>().charName = playerName;
-        Debug.Log("############################");
         GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.doDmg(0);
         //Destroy(GameObject.Find("Playername_save"));
     }
@@ -43,6 +41,7 @@ public class GameSession : MonoBehaviour
     public void AddToGameLevel()
     {
         currentGameLevel++;
+        levelsize += 5;
         FindObjectOfType<UIManager>().UpdateGameLevel(currentGameLevel);
     }
 

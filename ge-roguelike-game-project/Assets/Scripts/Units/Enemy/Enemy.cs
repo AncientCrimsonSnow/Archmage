@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
 
     void Start(){
         dungeonLevel = GameObject.Find("Canvas").GetComponent<GameSession>().currentGameLevel;
-        Debug.Log("DungeonLevel: " + dungeonLevel);
+        //Debug.Log("DungeonLevel: " + dungeonLevel);
 
         enemyDamage = enemyDamage * dungeonLevel;
         enemyHealth = enemyHealth * dungeonLevel;
@@ -30,9 +30,9 @@ public class Enemy : MonoBehaviour
         // damage will be parsed to the player and the countdown set to false
         if (canTakeDamage && other.CompareTag("Player"))
         {
-            Debug.Log(other);
+            //Debug.Log(other);
             other.GetComponent<Player_Controller>()._charDataController.doDmg(enemyDamage);
-            Debug.Log("Did damage -<< " + enemyDamage);
+            //Debug.Log("Did damage -<< " + enemyDamage);
             StartCoroutine(damageTimer());
         }
     }

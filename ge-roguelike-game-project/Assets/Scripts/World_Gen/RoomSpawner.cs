@@ -20,13 +20,16 @@ public class RoomSpawner : MonoBehaviour
     
     //private float softCap = 35;
     //private float hardCap = 50;
-    private float softCap = 15;
-    private float hardCap = 20;
+    private float softCap;
+    private float hardCap;
     private float waitTime = 5;
     private float distanceToSpawn_Pow;
     
     void Start()
     {
+        hardCap = GameObject.Find("Canvas").GetComponent<GameSession>().levelsize;
+        softCap = (float) (hardCap * 0.7);
+        Debug.Log(hardCap);
         distanceToSpawn_Pow = transform.position.x * transform.position.x + transform.position.y * transform.position.y;
         Destroy(gameObject, waitTime);
         templates = GameObject.Find("Room Templates").GetComponent<RoomTemplates>();
@@ -82,7 +85,7 @@ public class RoomSpawner : MonoBehaviour
     {
         if(other.CompareTag("Spawnpoint"))
         {
-            if (!other.GetComponent<RoomSpawner>().spawned && !spawned)
+            if (!other.GetComponent<RoomSpawner>().spawned && !spawned && !gameObject.transform.position.Equals(new Vector3(0,0,0)))
             {
                 Instantiate(templates.closedRooms, transform.position, Quaternion.identity);
                 Destroy(gameObject);

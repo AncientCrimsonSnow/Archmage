@@ -16,7 +16,7 @@ public class LevelExit : MonoBehaviour
 
         if (Application.CanStreamedLevelBeLoaded(currentSceneIndex))
         {
-            Debug.Log("Trying to load next level ");
+            //Debug.Log("Trying to load next level ");
             
             //transition.SetTrigger("Start");
             //yield return new WaitForSecondsRealtime(levelLoadDelay);

@@ -34,7 +34,7 @@ public class CharData_Controller
     public void addExp(int exp)
     {
         _CharData.Exp += exp;
-        Debug.Log("Char EXP: " + _CharData.Exp + "/" + _CharData.MAXExpToLvlUp);
+        //Debug.Log("Char EXP: " + _CharData.Exp + "/" + _CharData.MAXExpToLvlUp);
         //Debug.Log(_CharData.MAXExpToLvlUp);
         //Lvl up by reaching max exp:
         if (_CharData.Exp >= _CharData.MAXExpToLvlUp)
@@ -60,7 +60,7 @@ public class CharData_Controller
 
     public void doDmg(int dmg)
     {
-        Debug.Log("Calculate damage in chardatacontroller-- " + dmg);
+        //Debug.Log("Calculate damage in chardatacontroller-- " + dmg);
         _CharData.CurrentHp -= dmg;
         //if player die
         
@@ -90,10 +90,10 @@ public class CharData_Controller
         file.Close();
         
         
-        Debug.Log("Char is saved with the values:");
+        //Debug.Log("Char is saved with the values:");
         foreach (var thisVar in this._CharData.GetType().GetProperties())
         {
-            Debug.Log(thisVar.Name + " = " + thisVar.GetValue(this._CharData, null));
+            //Debug.Log(thisVar.Name + " = " + thisVar.GetValue(this._CharData, null));
         }
     }
 
@@ -108,10 +108,10 @@ public class CharData_Controller
             ;
             
             
-            Debug.Log("Char is loaded with the values:");
+            //Debug.Log("Char is loaded with the values:");
             foreach (var thisVar in this._CharData.GetType().GetProperties())
             {
-                Debug.Log(thisVar.Name + " = " + thisVar.GetValue(this._CharData, null));
+                //Debug.Log(thisVar.Name + " = " + thisVar.GetValue(this._CharData, null));
             }
 
             return true;

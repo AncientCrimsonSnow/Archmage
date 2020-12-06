@@ -74,7 +74,7 @@ public class RoomTemplates : MonoBehaviour
 
     void spawnBoss(){
         Instantiate(boss, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
-        Debug.Log("Boss spawned at: " + rooms[rooms.Count - 1].transform.position);
+        //Debug.Log("Boss spawned at: " + rooms[rooms.Count - 1].transform.position);
         spawnedBoss = true;
         
         
@@ -89,7 +89,7 @@ public class RoomTemplates : MonoBehaviour
         foreach (var room in rooms)
         {
             if(i == 0 || i == rc){
-                Debug.Log("No ennemy in first and last room");
+                //Debug.Log("No ennemy in first and last room");
             }else{
 
                 // random.NextDouble() * (maximum - minimum) + minimum;
