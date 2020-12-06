@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    AudioSource hitSound;
+
+    void Awake(){
+        hitSound = GetComponent<AudioSource>();
+    }
+
+    void Start(){
+
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-
-        AudioSource shotSource;
-
-        void Start(){
-            shotSource = GetComponent<AudioSource>();
-            shotSource.Play();
-        }
         
+        hitSound.Play();
+
         int damageAmount = GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController._CharData.Strength; 
         //Debug.Log(damageAmount);
         Enemy enemy = collision.GetComponent<Enemy>();
 
+        //hitSource.Play();
+
         //Debug.Log("Hit enemy " + collision.tag);
+
         if (collision.CompareTag("Boss"))
         {
 
@@ -39,5 +47,7 @@ public class Bullet : MonoBehaviour
         }else if(collision.CompareTag("Wall")){
             Destroy(gameObject);
         }
+
+
     }
 }

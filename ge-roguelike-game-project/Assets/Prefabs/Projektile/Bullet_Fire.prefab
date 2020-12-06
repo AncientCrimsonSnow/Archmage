@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2156938056252663105}
   - component: {fileID: -5655465799384910858}
   - component: {fileID: -802522141419410365}
-  - component: {fileID: -2092542163222841506}
+  - component: {fileID: -569094635279954799}
   m_Layer: 0
   m_Name: Bullet_Fire
   m_TagString: Bullet
@@ -134,7 +134,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.47, y: 0.82}
   m_Direction: 0
---- !u!82 &-2092542163222841506
+--- !u!82 &-569094635279954799
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,8 +144,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 751c15c138efbd5448de08f05d33f0b3, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 6ad1ea4db355eef41a3abd66f78e2cf5, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

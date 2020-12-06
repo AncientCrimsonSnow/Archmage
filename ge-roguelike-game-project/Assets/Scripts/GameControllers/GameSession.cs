@@ -47,14 +47,19 @@ public class GameSession : MonoBehaviour
         FindObjectOfType<UIManager>().UpdateGameLevel(currentGameLevel);
     }
 
-    private void ResetGameSession()
-    {
-        SceneManager.LoadScene(gameOverScene);
-        Destroy(gameObject);
-    }
-
     public void PlayerDied()
     {
+
         ResetGameSession();
+    }
+
+    private void ResetGameSession()
+    {
+        int maxHp = GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController._CharData.MAXHp; 
+        GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController._CharData.CurrentHp = maxHp;
+        GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController.saveData();
+
+        SceneManager.LoadScene(gameOverScene);
+        Destroy(gameObject);
     }
 }
