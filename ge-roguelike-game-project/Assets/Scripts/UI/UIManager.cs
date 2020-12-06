@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     {
 	    FindObjectOfType<Healthbar>().SetMaxHealth(health);
     }
+
 	public void UpdateGameLevel(int level)
     {
         FindObjectOfType<LevelCounter>().SetGameLevel(level);

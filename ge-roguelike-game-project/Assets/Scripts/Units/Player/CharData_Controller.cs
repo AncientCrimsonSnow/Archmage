@@ -58,6 +58,7 @@ public class CharData_Controller
         //Debug.Log(_CharData.CurrentHp);
 
         GameObject.FindObjectOfType<UIManager>().UpdateLives(_CharData.CurrentHp);
+        GameObject.FindObjectOfType<UIManager>().SetMaxHP(_CharData.CurrentHp);
     }
 
     public void doDmg(int dmg)
