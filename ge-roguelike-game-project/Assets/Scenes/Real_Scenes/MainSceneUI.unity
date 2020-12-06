@@ -631,7 +631,7 @@ RectTransform:
   m_Children:
   - {fileID: 145343543}
   m_Father: {fileID: 924123266}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1131,6 +1131,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1803839108}
   - {fileID: 924123266}
   - {fileID: 1088870675}
   - {fileID: 1610304268}
@@ -1278,7 +1279,7 @@ RectTransform:
   m_Children:
   - {fileID: 353708577}
   m_Father: {fileID: 924123266}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2006,7 +2007,7 @@ RectTransform:
   m_Children:
   - {fileID: 28928505}
   m_Father: {fileID: 924123266}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2157,16 +2158,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1803839108}
   - {fileID: 340239835}
   - {fileID: 538487792}
   - {fileID: 751227274}
   m_Father: {fileID: 375299668}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 472}
+  m_AnchoredPosition: {x: 9, y: 15}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1088870674
@@ -2199,7 +2199,7 @@ RectTransform:
   - {fileID: 99829514}
   - {fileID: 1784785913}
   m_Father: {fileID: 375299668}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2974,7 +2974,7 @@ RectTransform:
   - {fileID: 60245442}
   - {fileID: 734588483}
   m_Father: {fileID: 375299668}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3542,7 +3542,7 @@ GameObject:
   - component: {fileID: 1803839110}
   - component: {fileID: 1803839109}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3559,12 +3559,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 924123266}
+  m_Father: {fileID: 375299668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 969, y: -370}
   m_SizeDelta: {x: 1680.8746, y: 518.74146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1803839109
@@ -3644,7 +3644,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.76
-  m_Text: Roguelike Game
+  m_Text: Archmage
 --- !u!222 &1803839113
 CanvasRenderer:
   m_ObjectHideFlags: 0

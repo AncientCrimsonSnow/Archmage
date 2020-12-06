@@ -27,6 +27,7 @@ public class Healthbar : MonoBehaviour
     public void SetCurrentHealthText(int currentHealth)
     {
         currentHPText.text = currentHealth + " /";
+        Debug.Log(currentHealth);
     }
 
     public void SetMaxHealthText(int maxHealth)

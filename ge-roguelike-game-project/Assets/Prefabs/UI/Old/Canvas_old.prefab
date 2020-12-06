@@ -108,8 +108,9 @@ GameObject:
   - component: {fileID: 8316325242433607375}
   - component: {fileID: 8316325242433607374}
   - component: {fileID: 7987661334578021444}
+  - component: {fileID: 8117744791832897338}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Canvas_old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,10 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe3efc0f79b6d4a0586169336376568f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
   gameOverScene: GameOverScene
   currentGameLevel: 1
+  levelsize: 20
 --- !u!114 &8316325242433607374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 8316325243142298280}
+  currentHPText: {fileID: 0}
+  maxHPText: {fileID: 0}
 --- !u!114 &7987661334578021444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +252,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevelText: {fileID: 6929626059614395699}
+--- !u!114 &8117744791832897338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8316325242433607366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfea84ec0cda4797822117019476b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+  currentEXPText: {fileID: 0}
+  EXPtoNextLvlText: {fileID: 0}
 --- !u!1001 &4456368529081313307
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17,4 +17,16 @@ public class UIManager : MonoBehaviour
     {
         FindObjectOfType<LevelCounter>().SetGameLevel(level);
     }
+
+    public void UpdateExp(int exp)
+    {
+        FindObjectOfType<Expbar>().SetExp(exp);
+    }
+
+    public void SetExpToNextLvl(int exp)
+    {
+        FindObjectOfType<Expbar>().SetEXPToNextLvl(exp);
+    }
+
+
 }
