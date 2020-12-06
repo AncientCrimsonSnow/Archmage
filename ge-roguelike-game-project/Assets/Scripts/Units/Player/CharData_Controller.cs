@@ -88,6 +88,9 @@ public class CharData_Controller
         {
             _CharData.CurrentHp = _CharData.MAXHp;
         }
+
+        GameObject.FindObjectOfType<UIManager>().UpdateLives(_CharData.CurrentHp);
+
     }
     public void addSpeed(float moveSpeed)
     {
