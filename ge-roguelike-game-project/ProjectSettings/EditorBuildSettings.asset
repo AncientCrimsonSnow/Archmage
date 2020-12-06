@@ -7,41 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Real_Scenes/MainSceneUI.unity
-    guid: 14fa651f899e32547adcf9b719b11b1a
+    guid: 458ef0a61527d8d4197fa18715bc4bcd
   - enabled: 1
     path: Assets/Scenes/Real_Scenes/Ingame.unity
-    guid: fc6bcf5fc6bfb874584db6ead1fa9a9d
+    guid: 093bcc4d559807746a6ddac481cef383
   - enabled: 1
     path: Assets/Scenes/Real_Scenes/GameOverUI.unity
     guid: 9a6765d59d23167409045c6c15844b4f
-  - enabled: 0
-    path: Assets/Scenes/Testing/MainSceneUI_test.unity
-    guid: 02d2097effb09924297653be0e940785
-  - enabled: 0
-    path: Assets/Scenes/Testing/Ingame_test.unity
-    guid: 6a72297e36eae9741af51fdf69014a93
-  - enabled: 0
-    path: Assets/Scenes/Testing/GameOverUI_test.unity
-    guid: 7c9bc37ac63a5df498bfd32590868cda
-  - enabled: 1
-    path: Assets/Scenes/Testing/Dasha/MainSceneUI_dasha_testing.unity
-    guid: 9c50cb310879049ada47e1cbc05b7abf
-  - enabled: 1
-    path: Assets/Scenes/Testing/Dasha/Ingame_dasha_testing.unity
-    guid: df42f9373a3ea4f8692d4e7b7294c5e9
-  - enabled: 1
-    path: Assets/Scenes/Testing/Dasha/GameOverUI_test 1.unity
-    guid: a0b0a97d33c7142cca1a692cc75f2967
-  - enabled: 1
-    path: Assets/Scenes/Testing/Juri/GameOverUI_juri.unity
-    guid: 844756b6f314f1c47b6207a588386b9a
-  - enabled: 1
-    path: Assets/Scenes/Testing/Juri/Ingame_juri.unity
-    guid: a84f8a978043b434bbf34a46ea8d3198
-  - enabled: 1
-    path: Assets/Scenes/Testing/Juri/MainSceneUI_juri.unity
-    guid: e8603c5f494fb7840b99267eb5f9f91c
-  - enabled: 1
-    path: Assets/Scenes/Testing/Juri/Ingame_juri_testing.unity
-    guid: 208fb067e613fb047b71a9f2458c539f
   m_configObjects: {}

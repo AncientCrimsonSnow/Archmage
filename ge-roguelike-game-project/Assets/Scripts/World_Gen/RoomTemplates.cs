@@ -115,11 +115,9 @@ public class RoomTemplates : MonoBehaviour
             float perc = UnityEngine.Random.Range(0.0f, 1.0f);
             //Debug.Log(perc);
             // random.NextDouble() * (maximum - minimum) + minimum;
-            if(perc <= 0.01f){
+            if(perc <= 0.1f){
                 itemPos = randomPosInRoom(room);
-
                 //Debug.Log("Room position: " + room.transform.position.y);
-
                 // Instantiate(enemy, room.transform.position, Quaternion.identity);
                 Instantiate(item, itemPos, Quaternion.identity);
             }
