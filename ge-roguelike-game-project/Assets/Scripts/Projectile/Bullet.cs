@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         
-        hitSound.Play();
+        //hitSound.Play();
 
         int damageAmount = GameObject.Find("Player").GetComponent<Player_Controller>()._charDataController._CharData.Strength; 
         //Debug.Log(damageAmount);
