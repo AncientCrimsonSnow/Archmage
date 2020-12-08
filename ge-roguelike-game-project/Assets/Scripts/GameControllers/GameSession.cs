@@ -49,7 +49,6 @@ public class GameSession : MonoBehaviour
 
     public void PlayerDied()
     {
-
         ResetGameSession();
     }
 
